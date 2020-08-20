@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow: hidden;
+}  
+.animatedbg{
+    background: url(Img/buildingbg.jpg);
+    height: 200vh;
+    width: 1000vw;
+    background-repeat: repeat-x;
+    animation: building_moving linear 20s infinite; 
+}
+
+
+#car{
+    background: url(Img/car.png);
+    height: 16vw;
+    width: 20vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 71vh;
+    left:22vw;
+    animation: carshaking linear 1s infinite;
+}
+
+.leftwheel img{
+    position: absolute;
+    top:90vh;
+    left:25.8vw;
+    height: 5vw;
+    width:5vw;
+    animation: wheel linear 0.8s infinite;
+    /* animation: wheel linear 0.7s infinite; */
+}
+
+
+.rightwheel img{
+    position: absolute;
+    top:89.5vh;
+    left:34vw;
+    height: 5vw;
+    width:5vw;
+    animation: wheel linear 0.8s infinite;
+    /* animation: wheel linear 0.7s infinite; */
+}
+
+@keyframes building_moving{
+    100%{
+        transform: translateX(-120vw)
+    }
+}
+
+@keyframes wheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carshaking{
+    0%{
+        transform: translateY(2.5px);
+    }
+    50%{
+        transform: translateY(-2.5px);
+    }
+    100%{
+        transform: translateY(2.5px);
+    }
+    
+}
